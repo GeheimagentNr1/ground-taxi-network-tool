@@ -1,0 +1,38 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.opengis.net/kml/2.2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="coordinates">
+		<xs:simpleType>
+			<xs:list itemType="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="name" type="xs:string"/>
+	<xs:element name="LineString">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns:coordinates" xmlns:ns="http://www.opengis.net/kml/2.2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Placemark">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns:name" xmlns:ns="http://www.opengis.net/kml/2.2"/>
+				<xs:element ref="ns:LineString" xmlns:ns="http://www.opengis.net/kml/2.2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Document">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns:name" xmlns:ns="http://www.opengis.net/kml/2.2"/>
+				<xs:element ref="ns:Placemark" maxOccurs="unbounded" minOccurs="0" xmlns:ns="http://www.opengis.net/kml/2.2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="kml">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns:Document" xmlns:ns="http://www.opengis.net/kml/2.2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

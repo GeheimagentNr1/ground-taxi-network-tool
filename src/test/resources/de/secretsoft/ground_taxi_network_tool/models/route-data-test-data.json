@@ -1,0 +1,2782 @@
+{
+	"buildGroundLayoutRouteString": [
+		{
+			"displayName": "Exit",
+			"route": {
+				"type": "exit",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"33",
+					"Unrealistic"
+				],
+				"exitRunways": [
+					{
+						"runway": "15",
+						"diretion": "LEFT"
+					},
+					{
+						"runway": "Unrealistic",
+						"diretion": "RIGHT"
+					}
+				],
+				"speed": 20,
+				"points": [
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": false
+					},
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": false
+					}
+				]
+			},
+			"kmlProcessedRawString": "Exit; 33, Unrealistic; 15-LEFT, Unrealistic-RIGHT; B1; END-_-_-_-_-_-_-_-_-_-_-_-_-HP_B1-EXP_B1; 20;",
+			"expectedDefaultGroundLayoutRouteString": "EXIT:15:B1:LEFT:20",
+			"expectedSpecialGroundLayoutRouteString": "EXIT:15:B1:LEFT:20"
+		},
+		{
+			"displayName": "Holding Point with one runway",
+			"route": {
+				"type": "holding_point",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"33"
+				],
+				"speed": 20,
+				"points": [
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": false
+					}
+				]
+			},
+			"expectedDefaultGroundLayoutRouteString": "TAXI:B1:20:1:HP 33 B1",
+			"expectedSpecialGroundLayoutRouteString": "TAXI:B1:20:1:HP 33 B1"
+		},
+		{
+			"displayName": "Holding Point with two runways",
+			"route": {
+				"type": "holding_point",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"15",
+					"33"
+				],
+				"speed": 20,
+				"points": [
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": false
+					}
+				]
+			},
+			"expectedDefaultGroundLayoutRouteString": "TAXI:B1:20:1:HP 15/33 B1",
+			"expectedSpecialGroundLayoutRouteString": "TAXI:B1:20:1:HP 15/33 B1"
+		},
+		{
+			"displayName": "Line Up",
+			"route": {
+				"type": "line_up",
+				"raw": "LU; 33; 15; B1; HP_B1-END",
+				"name": "B1",
+				"runwayLineUp": "33",
+				"runwayExit": "15",
+				"speed": 20,
+				"points": [
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": false
+					}
+				]
+			},
+			"expectedDefaultGroundLayoutRouteString": "TAXI:B1:20:1:HP 33 B1 LU",
+			"expectedSpecialGroundLayoutRouteString": "TAXI:B1:20:1:HP 33 B1 LU"
+		},
+		{
+			"displayName": "Stand (Gate) without taxiout",
+			"route": {
+				"type": "stand",
+				"raw": "Gate; 06; 06-Z1O-Z1-Z1B",
+				"name": "06",
+				"gate": true,
+				"taxiout": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "Z1B",
+						"latitude": 53.63072540181069,
+						"longitude": 10.00186313670052,
+						"start": true
+					},
+					{
+						"name": "Z1",
+						"latitude": 53.63061708191364,
+						"longitude": 10.00214250676145,
+						"start": false
+					},
+					{
+						"name": "Z1O",
+						"latitude": 53.63051095581716,
+						"longitude": 10.00242377690884,
+						"start": false
+					},
+					{
+						"name": "06",
+						"latitude": 53.6300001771056,
+						"longitude": 10.00377597466543,
+						"start": false
+					}
+				]
+			},
+			"expectedDefaultGroundLayoutRouteString": "TAXI:G06:20:1",
+			"expectedSpecialGroundLayoutRouteString": "TAXI:G06:20:1:G06"
+		},
+		{
+			"displayName": "Stand (Stand) with taxiout",
+			"route": {
+				"type": "stand",
+				"raw": "Stand; 44A; 44A-Z8; 1",
+				"name": "44A",
+				"gate": false,
+				"taxiout": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "44A",
+						"latitude": 53.62555830874201,
+						"longitude": 10.0036282358372,
+						"start": true
+					},
+					{
+						"name": "Z8",
+						"latitude": 53.62580850189723,
+						"longitude": 10.00444152770413,
+						"start": false
+					}
+				]
+			},
+			"expectedDefaultGroundLayoutRouteString": "TAXI:S44A:20:1",
+			"expectedSpecialGroundLayoutRouteString": "TAXI:S44A:20:1:S44A"
+		},
+		{
+			"displayName": "Taxiout",
+			"route": {
+				"type": "taxiout",
+				"raw": "Taxiout; Z7; 44A; 44A-Z7",
+				"name": "Z7",
+				"stand": "44A",
+				"gate": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "44A",
+						"latitude": 53.62555915274862,
+						"longitude": 10.00362808694895,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					}
+				]
+			},
+			"expectedDefaultGroundLayoutRouteString": "TAXI:Z7:20:1",
+			"expectedSpecialGroundLayoutRouteString": "TAXI:Z7:20:1"
+		},
+		{
+			"displayName": "Taxiway without stands",
+			"route": {
+				"type": "taxiway",
+				"raw": "B1; EXP_B1-B1/Z8/Z5/Z7_E",
+				"name": "B1",
+				"hasStands": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "B1/Z8/Z5/Z7_E",
+						"latitude": 53.62598847285161,
+						"longitude": 10.0032728259708,
+						"start": false
+					}
+				]
+			},
+			"expectedDefaultGroundLayoutRouteString": "TAXI:B1:20:1",
+			"expectedSpecialGroundLayoutRouteString": "TAXI:B1:20:1"
+		},
+		{
+			"displayName": "Taxiway with stands",
+			"route": {
+				"type": "taxiway",
+				"raw": "Z7; B1/Z8/Z5/Z7_S-END; 1",
+				"name": "Z7",
+				"hasStandsTaxiouts": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				]
+			},
+			"expectedDefaultGroundLayoutRouteString": "TAXI:Z7:20:1",
+			"expectedSpecialGroundLayoutRouteString": "TAXI:Z7:20:1"
+		}
+	],
+	"splitPointsAtCrossings": [
+		{
+			"displayName": "2 Points",
+			"route": {
+				"type": "taxiway",
+				"raw": "B1; EXP_B1-B1/Z8/Z5/Z7_E",
+				"name": "B1",
+				"hasStands": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "B1/Z8/Z5/Z7_E",
+						"latitude": 53.62598847285161,
+						"longitude": 10.0032728259708,
+						"start": false
+					}
+				]
+			},
+			"expectedSplittedPoints": [
+				[
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "B1/Z8/Z5/Z7_E",
+						"latitude": 53.62598847285161,
+						"longitude": 10.0032728259708,
+						"start": false
+					}
+				]
+			]
+		},
+		{
+			"displayName": "3 Crossings",
+			"route": {
+				"type": "taxiway",
+				"raw": "Z7; B1/Z8/Z5/Z7_S-ZZZ; 1",
+				"name": "Z7",
+				"hasStandsTaxiouts": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "ZZZ",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				]
+			},
+			"expectedSplittedPoints": [
+				[
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					}
+				],
+				[
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "ZZZ",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				]
+			]
+		},
+		{
+			"displayName": "3 Crossings and empty point",
+			"route": {
+				"type": "taxiway",
+				"raw": "Z7; B1/Z8/Z5/Z7_S-ZZZ; 1",
+				"name": "Z7",
+				"hasStandsTaxiouts": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 1,
+						"longitude": 1,
+						"start": false
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "ZZZ",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				]
+			},
+			"expectedSplittedPoints": [
+				[
+					
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 1,
+						"longitude": 1,
+						"start": false
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					}
+				],
+				[
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "ZZZ",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				]
+			]
+		},
+		{
+			"displayName": "3 Crossings and empty point at start and end",
+			"route": {
+				"type": "taxiway",
+				"raw": "Z7; B1/Z8/Z5/Z7_S-ZZZ; 1",
+				"name": "Z7",
+				"hasStandsTaxiouts": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "_",
+						"latitude": 1,
+						"longitude": 1,
+						"start": false
+					},
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "ZZZ",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 2,
+						"longitude": 2,
+						"start": false
+					}
+				]
+			},
+			"expectedSplittedPoints": [
+				[
+					{
+						"name": "_",
+						"latitude": 1,
+						"longitude": 1,
+						"start": false
+					},
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					}
+				],
+				[
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					}
+				],
+				[
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "ZZZ",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				],
+				[
+					{
+						"name": "ZZZ",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 2,
+						"longitude": 2,
+						"start": false
+					}
+				]
+			]
+		}
+	],
+	"buildGroundLayoutRouteParts": [
+		{
+			"displayName": "Exit",
+			"route": {
+				"type": "exit",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"33",
+					"Unrealistic"
+				],
+				"exitRunways": [
+					{
+						"runway": "15",
+						"diretion": "LEFT"
+					},
+					{
+						"runway": "Unrealistic",
+						"diretion": "RIGHT"
+					}
+				],
+				"speed": 20,
+				"points": [
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": false
+					},
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": false
+					}
+				]
+			},
+			"expectedRouteParts": [
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "END",
+							"latitude": 53.62591119966135,
+							"longitude": 9.999873821341103,
+							"start": true
+						},
+						{
+							"name": "_",
+							"latitude": 53.62569958343035,
+							"longitude": 10.00005943750768,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.6256383698856,
+							"longitude": 10.00012001008401,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62558480779817,
+							"longitude": 10.00018626327451,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62553736363733,
+							"longitude": 10.00026982641274,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.6254905070213,
+							"longitude": 10.00037586607451,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62544796089875,
+							"longitude": 10.00051188154226,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62541735022211,
+							"longitude": 10.00066232107385,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62540545096495,
+							"longitude": 10.00080394569528,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62540629756148,
+							"longitude": 10.00093072889968,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62541580221034,
+							"longitude": 10.00105066561503,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62543414344327,
+							"longitude": 10.00116247279543,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62546081019625,
+							"longitude": 10.00126605369644,
+							"start": false
+						},
+						{
+							"name": "HP_B1",
+							"latitude": 53.62559713589739,
+							"longitude": 10.00170507345707,
+							"start": false
+						},
+						{
+							"name": "EXP_B1",
+							"latitude": 53.62577206329938,
+							"longitude": 10.00228962590615,
+							"start": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"displayName": "Holding Point",
+			"route": {
+				"type": "holding_point",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"33",
+					"Unrealistic"
+				],
+				"speed": 20,
+				"points": [
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": false
+					}
+				]
+			},
+			"expectedRouteParts": [
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "EXP_B1",
+							"latitude": 53.62577206329938,
+							"longitude": 10.00228962590615,
+							"start": true
+						},
+						{
+							"name": "HP_B1",
+							"latitude": 53.62559713589739,
+							"longitude": 10.00170507345707,
+							"start": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"displayName": "Line Up",
+			"route": {
+				"type": "line_up",
+				"raw": "LU; 33; 15; B1; HP_B1-END",
+				"name": "B1",
+				"runwayLineUp": "33",
+				"runwayExit": "15",
+				"speed": 20,
+				"points": [
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": false
+					}
+				]
+			},
+			"expectedRouteParts": [
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "HP_B1",
+							"latitude": 53.62559713589739,
+							"longitude": 10.00170507345707,
+							"start": true
+						},
+						{
+							"name": "_",
+							"latitude": 53.62546081019625,
+							"longitude": 10.00126605369644,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62543414344327,
+							"longitude": 10.00116247279543,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62541580221034,
+							"longitude": 10.00105066561503,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62540629756148,
+							"longitude": 10.00093072889968,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62540545096495,
+							"longitude": 10.00080394569528,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62541735022211,
+							"longitude": 10.00066232107385,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62544796089875,
+							"longitude": 10.00051188154226,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.6254905070213,
+							"longitude": 10.00037586607451,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62553736363733,
+							"longitude": 10.00026982641274,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62558480779817,
+							"longitude": 10.00018626327451,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.6256383698856,
+							"longitude": 10.00012001008401,
+							"start": false
+						},
+						{
+							"name": "_",
+							"latitude": 53.62569958343035,
+							"longitude": 10.00005943750768,
+							"start": false
+						},
+						{
+							"name": "END",
+							"latitude": 53.62591119966135,
+							"longitude": 9.999873821341103,
+							"start": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"displayName": "Stand (Stand) with one taxiway",
+			"route": {
+				"type": "stand",
+				"raw": "Stand; 44A; 44A-Z8; 1",
+				"name": "44A",
+				"gate": false,
+				"taxiout": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "Z8",
+						"latitude": 53.62580850189723,
+						"longitude": 10.00444152770413,
+						"start": false
+					},
+					{
+						"name": "44A",
+						"latitude": 53.62555830874201,
+						"longitude": 10.0036282358372,
+						"start": true
+					}
+				]
+			},
+			"expectedRouteParts": [
+				{
+					"useDefaultGroundLayoutRouteString": false,
+					"points": [
+						{
+							"name": "Z8",
+							"latitude": 53.62580850189723,
+							"longitude": 10.00444152770413,
+							"start": false
+						},
+						{
+							"name": "44A",
+							"latitude": 53.62555830874201,
+							"longitude": 10.0036282358372,
+							"start": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"displayName": "Stand (Gate) with three taxiways",
+			"route": {
+				"type": "stand",
+				"raw": "Gate; 06; 06-Z1O-Z1-Z1B",
+				"name": "06",
+				"gate": true,
+				"taxiout": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "Z1B",
+						"latitude": 53.63072540181069,
+						"longitude": 10.00186313670052,
+						"start": true
+					},
+					{
+						"name": "Z1",
+						"latitude": 53.63061708191364,
+						"longitude": 10.00214250676145,
+						"start": false
+					},
+					{
+						"name": "Z1O",
+						"latitude": 53.63051095581716,
+						"longitude": 10.00242377690884,
+						"start": false
+					},
+					{
+						"name": "06",
+						"latitude": 53.6300001771056,
+						"longitude": 10.00377597466543,
+						"start": false
+					}
+				]
+			},
+			"expectedRouteParts": [
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "Z1B",
+							"latitude": 53.63072540181069,
+							"longitude": 10.00186313670052,
+							"start": true
+						},
+						{
+							"name": "Z1",
+							"latitude": 53.63061708191364,
+							"longitude": 10.00214250676145,
+							"start": false
+						}
+					]
+				},
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "Z1",
+							"latitude": 53.63061708191364,
+							"longitude": 10.00214250676145,
+							"start": false
+						},
+						{
+							"name": "Z1O",
+							"latitude": 53.63051095581716,
+							"longitude": 10.00242377690884,
+							"start": false
+						}
+					]
+				},
+				{
+					"useDefaultGroundLayoutRouteString": false,
+					"points": [
+						{
+							"name": "Z1O",
+							"latitude": 53.63051095581716,
+							"longitude": 10.00242377690884,
+							"start": false
+						},
+						{
+							"name": "06",
+							"latitude": 53.6300001771056,
+							"longitude": 10.00377597466543,
+							"start": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"displayName": "Taxiout with one taxiway",
+			"route": {
+				"type": "taxiout",
+				"raw": "Taxiout; Z7; 44A; 44A-Z7",
+				"name": "Z7",
+				"stand": "44A",
+				"gate": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "44A",
+						"latitude": 53.62555915274862,
+						"longitude": 10.00362808694895,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					}
+				]
+			},
+			"expectedRouteParts": [
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "44A",
+							"latitude": 53.62555915274862,
+							"longitude": 10.00362808694895,
+							"start": true
+						},
+						{
+							"name": "Z7",
+							"latitude": 53.62544484837717,
+							"longitude": 10.00324513090494,
+							"start": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"displayName": "Taxiout with two taxiways",
+			"route": {
+				"type": "taxiout",
+				"raw": "Taxiout; Z7; 44A; 44A-Z7",
+				"name": "Z7",
+				"stand": "44A",
+				"gate": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "44A",
+						"latitude": 53.62555915274862,
+						"longitude": 10.00362808694895,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "Z8",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					}
+				]
+			},
+			"expectedRouteParts": [
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "44A",
+							"latitude": 53.62555915274862,
+							"longitude": 10.00362808694895,
+							"start": true
+						},
+						{
+							"name": "Z7",
+							"latitude": 53.62544484837717,
+							"longitude": 10.00324513090494,
+							"start": false
+						}
+					]
+				},
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "Z7",
+							"latitude": 53.62544484837717,
+							"longitude": 10.00324513090494,
+							"start": false
+						},
+						{
+							"name": "Z8",
+							"latitude": 53.62544484837717,
+							"longitude": 10.00324513090494,
+							"start": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"displayName": "Taxiway without stands",
+			"route": {
+				"type": "taxiway",
+				"raw": "B1; EXP_B1-B1/Z8/Z5/Z7_E",
+				"name": "B1",
+				"hasStands": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "B1/Z8/Z5/Z7_E",
+						"latitude": 53.62598847285161,
+						"longitude": 10.0032728259708,
+						"start": false
+					}
+				]
+			},
+			"expectedRouteParts": [
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "EXP_B1",
+							"latitude": 53.62577206329938,
+							"longitude": 10.00228962590615,
+							"start": true
+						},
+						{
+							"name": "B1/Z8/Z5/Z7_E",
+							"latitude": 53.62598847285161,
+							"longitude": 10.0032728259708,
+							"start": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"displayName": "Taxiway with stands",
+			"route": {
+				"type": "taxiway",
+				"raw": "Z7; B1/Z8/Z5/Z7_S-END; 1",
+				"name": "Z7",
+				"hasStandsTaxiouts": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				]
+			},
+			"expectedRouteParts": [
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "B1/Z8/Z5/Z7_S",
+							"latitude": 53.62566118220359,
+							"longitude": 10.00306025591938,
+							"start": true
+						},
+						{
+							"name": "Z7",
+							"latitude": 53.62544484837717,
+							"longitude": 10.00324513090494,
+							"start": false
+						}
+					]
+				},
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "Z7",
+							"latitude": 53.62544484837717,
+							"longitude": 10.00324513090494,
+							"start": false
+						},
+						{
+							"name": "END",
+							"latitude": 53.62357894928473,
+							"longitude": 10.00485430917865,
+							"start": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"displayName": "Taxiway with stands and empty point",
+			"route": {
+				"type": "taxiway",
+				"raw": "Z7; B1/Z8/Z5/Z7_S-END; 1",
+				"name": "Z7",
+				"hasStandsTaxiouts": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				]
+			},
+			"expectedRouteParts": [
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "B1/Z8/Z5/Z7_S",
+							"latitude": 53.62566118220359,
+							"longitude": 10.00306025591938,
+							"start": true
+						},
+						{
+							"name": "_",
+							"latitude": 53.62544484837717,
+							"longitude": 10.00324513090494,
+							"start": false
+						},
+						{
+							"name": "Z7",
+							"latitude": 53.62544484837717,
+							"longitude": 10.00324513090494,
+							"start": false
+						}
+					]
+				},
+				{
+					"useDefaultGroundLayoutRouteString": true,
+					"points": [
+						{
+							"name": "Z7",
+							"latitude": 53.62544484837717,
+							"longitude": 10.00324513090494,
+							"start": false
+						},
+						{
+							"name": "END",
+							"latitude": 53.62357894928473,
+							"longitude": 10.00485430917865,
+							"start": false
+						}
+					]
+				}
+			]
+		}
+	],
+	"buildGroundLayoutStrings": [
+		{
+			"displayName": "Exit",
+			"route": {
+				"type": "exit",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"33",
+					"Unrealistic"
+				],
+				"exitRunways": [
+					{
+						"runway": "15",
+						"diretion": "LEFT"
+					},
+					{
+						"runway": "Unrealistic",
+						"diretion": "RIGHT"
+					}
+				],
+				"speed": 20,
+				"points": [
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": false
+					},
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": false
+					}
+				]
+			},
+			"expectedGroundLayoutRouteStrings": [
+				"EXIT:15:B1:LEFT:20",
+				"COORD:N053.37.33.28:E009.59.59.546;END",
+				"COORD:N053.37.32.519:E010.0.0.214",
+				"COORD:N053.37.32.298:E010.0.0.432",
+				"COORD:N053.37.32.105:E010.0.0.671",
+				"COORD:N053.37.31.935:E010.0.0.971",
+				"COORD:N053.37.31.766:E010.0.1.353",
+				"COORD:N053.37.31.613:E010.0.1.843",
+				"COORD:N053.37.31.502:E010.0.2.384",
+				"COORD:N053.37.31.46:E010.0.2.894",
+				"COORD:N053.37.31.463:E010.0.3.351",
+				"COORD:N053.37.31.497:E010.0.3.782",
+				"COORD:N053.37.31.563:E010.0.4.185",
+				"COORD:N053.37.31.659:E010.0.4.558",
+				"COORD:N053.37.32.15:E010.0.6.138;HP_B1",
+				"COORD:N053.37.32.779:E010.0.8.243;EXP_B1"
+			]
+		},
+		{
+			"displayName": "Holding Point",
+			"route": {
+				"type": "holding_point",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"15",
+					"33"
+				],
+				"speed": 20,
+				"points": [
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": false
+					}
+				]
+			},
+			"expectedGroundLayoutRouteStrings": [
+				"TAXI:B1:20:1:HP 15/33 B1",
+				"COORD:N053.37.32.779:E010.0.8.243;EXP_B1",
+				"COORD:N053.37.32.15:E010.0.6.138;HP_B1"
+			]
+		},
+		{
+			"displayName": "Line Up",
+			"route": {
+				"type": "line_up",
+				"raw": "LU; 33; 15; B1; HP_B1-END",
+				"name": "B1",
+				"runwayLineUp": "33",
+				"runwayExit": "15",
+				"speed": 20,
+				"points": [
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": false
+					}
+				]
+			},
+			"expectedGroundLayoutRouteStrings": [
+				"TAXI:B1:20:1:HP 33 B1 LU",
+				"COORD:N053.37.32.15:E010.0.6.138;HP_B1",
+				"COORD:N053.37.31.659:E010.0.4.558",
+				"COORD:N053.37.31.563:E010.0.4.185",
+				"COORD:N053.37.31.497:E010.0.3.782",
+				"COORD:N053.37.31.463:E010.0.3.351",
+				"COORD:N053.37.31.46:E010.0.2.894",
+				"COORD:N053.37.31.502:E010.0.2.384",
+				"COORD:N053.37.31.613:E010.0.1.843",
+				"COORD:N053.37.31.766:E010.0.1.353",
+				"COORD:N053.37.31.935:E010.0.0.971",
+				"COORD:N053.37.32.105:E010.0.0.671",
+				"COORD:N053.37.32.298:E010.0.0.432",
+				"COORD:N053.37.32.519:E010.0.0.214",
+				"COORD:N053.37.33.28:E009.59.59.546;END"
+			]
+		},
+		{
+			"displayName": "Stand (Stand) with one taxiway",
+			"route": {
+				"type": "stand",
+				"raw": "Stand; 44A; 44A-Z8; 1",
+				"name": "44A",
+				"gate": false,
+				"taxiout": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "Z8",
+						"latitude": 53.62580850189723,
+						"longitude": 10.00444152770413,
+						"start": false
+					},
+					{
+						"name": "44A",
+						"latitude": 53.62555830874201,
+						"longitude": 10.0036282358372,
+						"start": true
+					}
+				]
+			},
+			"expectedGroundLayoutRouteStrings": [
+				"TAXI:S44A:20:1:S44A",
+				"COORD:N053.37.32.911:E010.0.15.989;Z8",
+				"COORD:N053.37.32.01:E010.0.13.062;44A"
+			]
+		},
+		{
+			"displayName": "Stand (Gate) with three taxiways",
+			"route": {
+				"type": "stand",
+				"raw": "Gate; 06; 06-Z1O-Z1-Z1B",
+				"name": "06",
+				"gate": true,
+				"taxiout": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "Z1B",
+						"latitude": 53.63072540181069,
+						"longitude": 10.00186313670052,
+						"start": true
+					},
+					{
+						"name": "Z1",
+						"latitude": 53.63061708191364,
+						"longitude": 10.00214250676145,
+						"start": false
+					},
+					{
+						"name": "Z1O",
+						"latitude": 53.63051095581716,
+						"longitude": 10.00242377690884,
+						"start": false
+					},
+					{
+						"name": "06",
+						"latitude": 53.6300001771056,
+						"longitude": 10.00377597466543,
+						"start": false
+					}
+				]
+			},
+			"expectedGroundLayoutRouteStrings": [
+				"TAXI:G06:20:1",
+				"COORD:N053.37.50.611:E010.0.6.707;Z1B",
+				"COORD:N053.37.50.221:E010.0.7.713;Z1",
+				"TAXI:G06:20:1",
+				"COORD:N053.37.50.221:E010.0.7.713;Z1",
+				"COORD:N053.37.49.839:E010.0.8.726;Z1O",
+				"TAXI:G06:20:1:G06",
+				"COORD:N053.37.49.839:E010.0.8.726;Z1O",
+				"COORD:N053.37.48.001:E010.0.13.594;06"
+			]
+		},
+		{
+			"displayName": "Taxiout with one taxiway",
+			"route": {
+				"type": "taxiout",
+				"raw": "Taxiout; Z7; 44A; 44A-Z7",
+				"name": "Z7",
+				"stand": "44A",
+				"gate": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "44A",
+						"latitude": 53.62555915274862,
+						"longitude": 10.00362808694895,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					}
+				]
+			},
+			"expectedGroundLayoutRouteStrings": [
+				"TAXI:Z7:20:1",
+				"COORD:N053.37.32.013:E010.0.13.061;44A",
+				"COORD:N053.37.31.601:E010.0.11.682;Z7"
+			]
+		},
+		{
+			"displayName": "Taxiout with two taxiways",
+			"route": {
+				"type": "taxiout",
+				"raw": "Taxiout; Z7; 44A; 44A-Z7",
+				"name": "Z7",
+				"stand": "44A",
+				"gate": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "44A",
+						"latitude": 53.62555915274862,
+						"longitude": 10.00362808694895,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "Z8",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					}
+				]
+			},
+			"expectedGroundLayoutRouteStrings": [
+				"TAXI:Z7:20:1",
+				"COORD:N053.37.32.013:E010.0.13.061;44A",
+				"COORD:N053.37.31.601:E010.0.11.682;Z7",
+				"TAXI:Z7:20:1",
+				"COORD:N053.37.31.601:E010.0.11.682;Z7",
+				"COORD:N053.37.31.601:E010.0.11.682;Z8"
+			]
+		},
+		{
+			"displayName": "Taxiway without stands",
+			"route": {
+				"type": "taxiway",
+				"raw": "B1; EXP_B1-B1/Z8/Z5/Z7_E",
+				"name": "B1",
+				"hasStands": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "B1/Z8/Z5/Z7_E",
+						"latitude": 53.62598847285161,
+						"longitude": 10.0032728259708,
+						"start": false
+					}
+				]
+			},
+			"expectedGroundLayoutRouteStrings": [
+				"TAXI:B1:20:1",
+				"COORD:N053.37.32.779:E010.0.8.243;EXP_B1",
+				"COORD:N053.37.33.559:E010.0.11.782;B1/Z8/Z5/Z7_E"
+			]
+		},
+		{
+			"displayName": "Taxiway with stands",
+			"route": {
+				"type": "taxiway",
+				"raw": "Z7; B1/Z8/Z5/Z7_S-END; 1",
+				"name": "Z7",
+				"hasStandsTaxiouts": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				]
+			},
+			"expectedGroundLayoutRouteStrings": [
+				"TAXI:Z7:20:1",
+				"COORD:N053.37.32.38:E010.0.11.017;B1/Z8/Z5/Z7_S",
+				"COORD:N053.37.31.601:E010.0.11.682;Z7",
+				"TAXI:Z7:20:1",
+				"COORD:N053.37.31.601:E010.0.11.682;Z7",
+				"COORD:N053.37.24.884:E010.0.17.476;END"
+			]
+		},
+		{
+			"displayName": "Taxiway with stands and empty point",
+			"route": {
+				"type": "taxiway",
+				"raw": "Z7; B1/Z8/Z5/Z7_S-END; 1",
+				"name": "Z7",
+				"hasStandsTaxiouts": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				]
+			},
+			"expectedGroundLayoutRouteStrings": [
+				"TAXI:Z7:20:1",
+				"COORD:N053.37.32.38:E010.0.11.017;B1/Z8/Z5/Z7_S",
+				"COORD:N053.37.31.601:E010.0.11.682",
+				"COORD:N053.37.31.601:E010.0.11.682;Z7",
+				"TAXI:Z7:20:1",
+				"COORD:N053.37.31.601:E010.0.11.682;Z7",
+				"COORD:N053.37.24.884:E010.0.17.476;END"
+			]
+		}
+	],
+	"buildKmlRoutePointString": [
+		{
+			"displayName": "Route with 2 crossings and 2 points",
+			"route": {
+				"type": "stand",
+				"raw": "Stand; 44A; 44A-Z8; 1",
+				"name": "44A",
+				"gate": false,
+				"taxiout": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "Z8",
+						"latitude": 53.62580850189723,
+						"longitude": 10.00444152770413,
+						"start": true
+					},
+					{
+						"name": "44A",
+						"latitude": 53.62555830874201,
+						"longitude": 10.0036282358372,
+						"start": false
+					}
+				]
+			},
+			"kmlRoutePointString": "Z8-44A"
+		},
+		{
+			"displayName": "Route with more than 2 crossings and the same points count",
+			"route": {
+				"type": "stand",
+				"raw": "Gate; 06; 06-Z1O-Z1",
+				"name": "06",
+				"gate": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "Z1",
+						"latitude": 53.63061708191364,
+						"longitude": 10.00214250676145,
+						"start": true
+					},
+					{
+						"name": "Z1O",
+						"latitude": 53.63051095581716,
+						"longitude": 10.00242377690884,
+						"start": false
+					},
+					{
+						"name": "06",
+						"latitude": 53.6300001771056,
+						"longitude": 10.00377597466543,
+						"start": false
+					}
+				]
+			},
+			"kmlRoutePointString": "Z1-Z1O-06"
+		},
+		{
+			"displayName": "Route with 2 crossings and more points",
+			"route": {
+				"type": "line_up",
+				"raw": "LU; 33; 15; B1; END-HP_B1",
+				"name": "B1",
+				"runwayLineUp": "33",
+				"runwayExit": "15",
+				"speed": 20,
+				"points": [
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": false
+					}
+				]
+			},
+			"kmlRoutePointString": "HP_B1-END"
+		},
+		{
+			"displayName": "Route with more than 2 crossings and more points than crossings",
+			"route": {
+				"type": "exit",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"33"
+				],
+				"exitRunways": [
+					{
+						"runway": "15",
+						"diretion": "LEFT"
+					}
+				],
+				"speed": 20,
+				"points": [
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": false
+					},
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": false
+					}
+				]
+			},
+			"kmlRoutePointString": "END-_-_-_-_-_-_-_-_-_-_-_-_-HP_B1-EXP_B1"
+		}
+	],
+	"buildKmlProcessedRawString": [
+		{
+			"displayName": "Exit",
+			"route": {
+				"type": "exit",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"33",
+					"Unrealistic"
+				],
+				"exitRunways": [
+					{
+						"runway": "15",
+						"diretion": "LEFT"
+					},
+					{
+						"runway": "Unrealistic",
+						"diretion": "RIGHT"
+					}
+				],
+				"speed": 20,
+				"points": [
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": false
+					},
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": false
+					}
+				]
+			},
+			"kmlProcessedRawString": "Exit; 33, Unrealistic; 15-LEFT, Unrealistic-RIGHT; B1; END-_-_-_-_-_-_-_-_-_-_-_-_-HP_B1-EXP_B1; 20;"
+		},
+		{
+			"displayName": "Holding Point",
+			"route": {
+				"type": "holding_point",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"33",
+					"Unrealistic"
+				],
+				"speed": 20,
+				"points": [
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": false
+					}
+				]
+			},
+			"kmlProcessedRawString": "HP; 33, Unrealistic; B1; EXP_B1-HP_B1; 20;"
+		},
+		{
+			"displayName": "Line Up",
+			"route": {
+				"type": "line_up",
+				"raw": "LU; 33; 15; B1; HP_B1-END",
+				"name": "B1",
+				"runwayLineUp": "33",
+				"runwayExit": "15",
+				"speed": 20,
+				"points": [
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": false
+					}
+				]
+			},
+			"kmlProcessedRawString": "LU; 33; 15; B1; HP_B1-END; 20;"
+		},
+		{
+			"displayName": "Stand (Gate) without taxiout",
+			"route": {
+				"type": "stand",
+				"raw": "Gate; 06; 06-Z1O-Z1-Z1B",
+				"name": "06",
+				"gate": true,
+				"taxiout": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "Z1B",
+						"latitude": 53.63072540181069,
+						"longitude": 10.00186313670052,
+						"start": true
+					},
+					{
+						"name": "Z1",
+						"latitude": 53.63061708191364,
+						"longitude": 10.00214250676145,
+						"start": false
+					},
+					{
+						"name": "Z1O",
+						"latitude": 53.63051095581716,
+						"longitude": 10.00242377690884,
+						"start": false
+					},
+					{
+						"name": "06",
+						"latitude": 53.6300001771056,
+						"longitude": 10.00377597466543,
+						"start": false
+					}
+				]
+			},
+			"kmlProcessedRawString": "Gate; 06; Z1B-Z1-Z1O-06; 0; 20;"
+		},
+		{
+			"displayName": "Stand (Stand) with taxiout",
+			"route": {
+				"type": "stand",
+				"raw": "Stand; 44A; 44A-Z8; 1",
+				"name": "44A",
+				"gate": false,
+				"taxiout": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "44A",
+						"latitude": 53.62555830874201,
+						"longitude": 10.0036282358372,
+						"start": true
+					},
+					{
+						"name": "Z8",
+						"latitude": 53.62580850189723,
+						"longitude": 10.00444152770413,
+						"start": false
+					}
+				]
+			},
+			"kmlProcessedRawString": "Stand; 44A; 44A-Z8; 1; 20;"
+		},
+		{
+			"displayName": "Taxiout",
+			"route": {
+				"type": "taxiout",
+				"raw": "Taxiout; Z7; 44A; 44A-Z7",
+				"name": "Z7",
+				"stand": "44A",
+				"gate": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "44A",
+						"latitude": 53.62555915274862,
+						"longitude": 10.00362808694895,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					}
+				]
+			},
+			"kmlProcessedRawString": "Taxiout; Z7; 44A; 44A-Z7; 20;"
+		},
+		{
+			"displayName": "Taxiway without stands",
+			"route": {
+				"type": "taxiway",
+				"raw": "B1; EXP_B1-B1/Z8/Z5/Z7_E",
+				"name": "B1",
+				"hasStands": false,
+				"speed": 20,
+				"points": [
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					},
+					{
+						"name": "B1/Z8/Z5/Z7_E",
+						"latitude": 53.62598847285161,
+						"longitude": 10.0032728259708,
+						"start": false
+					}
+				]
+			},
+			"kmlProcessedRawString": "B1; EXP_B1-B1/Z8/Z5/Z7_E; 0; 20;"
+		},
+		{
+			"displayName": "Taxiway with stands",
+			"route": {
+				"type": "taxiway",
+				"raw": "Z7; B1/Z8/Z5/Z7_S-END; 1",
+				"name": "Z7",
+				"hasStandsTaxiouts": true,
+				"speed": 20,
+				"points": [
+					{
+						"name": "B1/Z8/Z5/Z7_S",
+						"latitude": 53.62566118220359,
+						"longitude": 10.00306025591938,
+						"start": true
+					},
+					{
+						"name": "Z7",
+						"latitude": 53.62544484837717,
+						"longitude": 10.00324513090494,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62357894928473,
+						"longitude": 10.00485430917865,
+						"start": false
+					}
+				]
+			},
+			"kmlProcessedRawString": "Z7; B1/Z8/Z5/Z7_S-Z7-END; 1; 20;"
+		}
+	]
+}

@@ -1,0 +1,110 @@
+{
+	"hasNonEmptyName": [
+		{
+			"displayName": "\"Test\" name",
+			"pointData": {
+				"name": "Test",
+				"latitude": 53.62890514380151,
+				"longitude": 10.00041074913203,
+				"start": false
+			},
+			"result": true
+		},
+		{
+			"displayName": "empty name",
+			"pointData": {
+				"name": "_",
+				"latitude": 53.62890514380151,
+				"longitude": 10.00041074913203,
+				"start": false
+			},
+			"result": false
+		},
+		{
+			"displayName": "END name",
+			"pointData": {
+				"name": "END",
+				"latitude": 53.62890514380151,
+				"longitude": 10.00041074913203,
+				"start": false
+			},
+			"result": true
+		}
+	],
+	"hasCrossingName": [
+		{
+			"displayName": "\"Test\" name",
+			"pointData": {
+				"name": "Test",
+				"latitude": 53.62890514380151,
+				"longitude": 10.00041074913203,
+				"start": false
+			},
+			"result": true
+		},
+		{
+			"displayName": "empty name",
+			"pointData": {
+				"name": "_",
+				"latitude": 53.62890514380151,
+				"longitude": 10.00041074913203,
+				"start": false
+			},
+			"result": false
+		},
+		{
+			"displayName": "END name",
+			"pointData": {
+				"name": "END",
+				"latitude": 53.62890514380151,
+				"longitude": 10.00041074913203,
+				"start": false
+			},
+			"result": false
+		}
+	],
+	"buildKmlCoordinatesString": [
+		{
+			"displayName": "\"Test\" name",
+			"pointData": {
+				"name": "Test",
+				"latitude": 53.62890514380151,
+				"longitude": 10.00041074913203,
+				"start": false
+			},
+			"coordinatesString": "10.00041074913203,53.62890514380151,0"
+		},
+		{
+			"displayName": "empty name",
+			"pointData": {
+				"name": "_",
+				"latitude": 53.62890514380151,
+				"longitude": 10.00041074913203,
+				"start": false
+			},
+			"coordinatesString": "10.00041074913203,53.62890514380151,0"
+		}
+	],
+	"buildGroundLayoutCoordinatesString": [
+		{
+			"displayName": "buildCoordinatesString with \"Test\" name",
+			"pointData": {
+				"name": "Test",
+				"latitude": 53.62890514380151,
+				"longitude": 10.00041074913203,
+				"start": false
+			},
+			"coordinatesString": "COORD:N053.37.44.059:E010.0.1.479;Test"
+		},
+		{
+			"displayName": "buildCoordinatesString with empty name",
+			"pointData": {
+				"name": "_",
+				"latitude": 53.62890514380151,
+				"longitude": 10.00041074913203,
+				"start": false
+			},
+			"coordinatesString": "COORD:N053.37.44.059:E010.0.1.479"
+		}
+	]
+}

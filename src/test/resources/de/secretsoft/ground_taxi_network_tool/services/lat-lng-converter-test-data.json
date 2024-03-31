@@ -1,0 +1,14 @@
+[
+	{
+		"displayName": "Convert positive coordinates",
+		"inputLatitude": 53.62890514380151,
+		"inputLongitude": 10.00041074913203,
+		"expectedCoordinatesString": "53°37'44.059\" N, 10°0'1.479\" E"
+	},
+	{
+		"displayName": "Convert negative coordinates",
+		"inputLatitude": -53.62890514380151,
+		"inputLongitude": -10.00041074913203,
+		"expectedCoordinatesString": "53°37'44.059\" S, 10°0'1.479\" W"
+	}
+]

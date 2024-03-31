@@ -1,0 +1,4 @@
+app:
+  inputKmlFile: ./data/EDDH.kml
+  processedKmlFile: ./data/EDDH_processed.kml
+  groundLayoutFile: ./data/EDDH_ground_layout.txt

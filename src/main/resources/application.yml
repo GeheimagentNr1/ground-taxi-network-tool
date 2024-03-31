@@ -1,0 +1,15 @@
+logging:
+  file:
+    path: ./logs
+
+
+spring:
+  application:
+    name: Ground Taxi Network Tool
+  datasource:
+    url: jdbc:h2:mem:groundtaxinetworktooldb
+    username: groundtaxinetworktool
+    password: groundtaxinetworktool
+#  batch:
+#    jdbc:
+#      initialize-schema: NEVER
