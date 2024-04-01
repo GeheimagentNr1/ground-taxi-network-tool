@@ -29,14 +29,15 @@ public class GateAndTaxioutPointAdder {
 		
 		List<String> errors = new ArrayList<>();
 		standsAndTaxiouts.forEach( standOrTaxiout -> standOrTaxiout.getPoints().stream()
-			.filter( pointData -> standOrTaxiout instanceof Stand && !Objects.equals(
-				standOrTaxiout.getName(),
-				pointData.getName()
-			) ||
-				standOrTaxiout instanceof Taxiout taxiout && !Objects.equals(
-					taxiout.getStand(),
-					pointData.getName()
-				) )
+			.filter( pointData ->
+				pointData.hasCrossingName() &&
+					(
+						standOrTaxiout instanceof Stand &&
+							!Objects.equals( standOrTaxiout.getName(), pointData.getName() ) ||
+							standOrTaxiout instanceof Taxiout taxiout &&
+								!Objects.equals( taxiout.getStand(), pointData.getName() )
+					)
+			)
 			.forEach( pointData -> {
 				boolean notFound = true;
 				for( Taxiway taxiway : standOrTaxioutTaxiways ) {

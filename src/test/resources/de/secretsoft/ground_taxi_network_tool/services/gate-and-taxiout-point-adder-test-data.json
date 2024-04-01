@@ -1540,5 +1540,170 @@
 			"For stand, gate or taxiout \"Gate; 06; 06-Z1O-Z1\" no stand/taxiout taxiway \"Z1\" found.",
 			"For stand, gate or taxiout \"Taxiout; Z7; 44A; 44A-Z7\" no stand/taxiout taxiway \"Z7\" found."
 		]
+	},
+	{
+		"displayName": "Taxiway with stands and taxiout with stand and taxiout having empty points",
+		"inputRoutes": [
+			{
+				"type": "taxiway",
+				"raw": "Z1; B4/Z1/Z5-Z3/A3/Z1; 1",
+				"name": "Z1",
+				"hasStandsTaxiouts": true,
+				"points": [
+					{
+						"name": "B4/Z1/Z5",
+						"latitude": 53.62890544160505,
+						"longitude": 10.00041115729763,
+						"start": true
+					},
+					{
+						"name": "Z3/A3/Z1",
+						"latitude": 53.63465393247114,
+						"longitude": 10.00184105203161,
+						"start": false
+					}
+				]
+			},
+			{
+				"type": "stand",
+				"raw": "Gate; 06; 06-Z1",
+				"name": "06",
+				"gate": true,
+				"points": [
+					{
+						"name": "06",
+						"latitude": 53.6300001771056,
+						"longitude": 10.00377597466543,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.63051095581716,
+						"longitude": 10.00242377690884,
+						"start": false
+					},
+					{
+						"name": "Z1",
+						"latitude": 53.63061708191364,
+						"longitude": 10.00214250676145,
+						"start": false
+					}
+				]
+			},
+			{
+				"type": "taxiout",
+				"raw": "Taxiout; Z1; 06; 06-Z1",
+				"name": "Z1",
+				"stand": "06",
+				"points": [
+					{
+						"name": "06",
+						"latitude": 53.6300001771056,
+						"longitude": 10.00377597466543,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.63100111023617,
+						"longitude": 10.00260381175405,
+						"start": false
+					},
+					{
+						"name": "Z1",
+						"latitude": 53.63098538311681,
+						"longitude": 10.00227205076963,
+						"start": false
+					}
+				]
+			}
+		],
+		"expectedRoutes": [
+			{
+				"type": "taxiway",
+				"raw": "Z1; B4/Z1/Z5-Z3/A3/Z1; 1",
+				"name": "Z1",
+				"hasStandsTaxiouts": true,
+				"standOrTaxioutAdded": true,
+				"points": [
+					{
+						"name": "B4/Z1/Z5",
+						"latitude": 53.62890544160505,
+						"longitude": 10.00041115729763,
+						"start": true
+					},
+					{
+						"name": "Z3/A3/Z1",
+						"latitude": 53.63465393247114,
+						"longitude": 10.00184105203161,
+						"start": false
+					},
+					{
+						"name": "Z1",
+						"latitude": 53.63061708191364,
+						"longitude": 10.00214250676145,
+						"start": false
+					},
+					{
+						"name": "Z1",
+						"latitude": 53.63098538311681,
+						"longitude": 10.00227205076963,
+						"start": false
+					}
+				]
+			},
+			{
+				"type": "stand",
+				"raw": "Gate; 06; 06-Z1",
+				"name": "06",
+				"gate": true,
+				"points": [
+					{
+						"name": "06",
+						"latitude": 53.6300001771056,
+						"longitude": 10.00377597466543,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.63051095581716,
+						"longitude": 10.00242377690884,
+						"start": false
+					},
+					{
+						"name": "Z1",
+						"latitude": 53.63061708191364,
+						"longitude": 10.00214250676145,
+						"start": false
+					}
+				]
+			},
+			{
+				"type": "taxiout",
+				"raw": "Taxiout; Z1; 06; 06-Z1",
+				"name": "Z1",
+				"stand": "06",
+				"points": [
+					{
+						"name": "06",
+						"latitude": 53.6300001771056,
+						"longitude": 10.00377597466543,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.63100111023617,
+						"longitude": 10.00260381175405,
+						"start": false
+					},
+					{
+						"name": "Z1",
+						"latitude": 53.63098538311681,
+						"longitude": 10.00227205076963,
+						"start": false
+					}
+				]
+			}
+		],
+		"errors": [ ]
 	}
 ]
