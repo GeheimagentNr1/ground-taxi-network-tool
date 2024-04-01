@@ -39,6 +39,8 @@ public class KmlLoader {
 	
 	private static final int DEFAULT_SPEED = 20;
 	
+	private static final int DEFAULT_STAND_SPEED = 10;
+	
 	public Pair<RouteData, List<String>> placemarkToRouteData( Placemark placemark ) {
 		
 		String raw = placemark.getName();
@@ -106,7 +108,7 @@ public class KmlLoader {
 						.name( parts[1] )
 						.gate( "Gate".equals( parts[0] ) )
 						.taxiout( parts.length >= 4 && "1".equals( parts[3] ) )
-						.speed( parts.length >= 5 ? Integer.parseInt( parts[4] ) : DEFAULT_SPEED )
+						.speed( parts.length >= 5 ? Integer.parseInt( parts[4] ) : DEFAULT_STAND_SPEED )
 						.points( points )
 						.build()
 				);
@@ -122,7 +124,7 @@ public class KmlLoader {
 						.raw( raw )
 						.name( parts[1] )
 						.stand( parts[2] )
-						.speed( parts.length >= 5 ? Integer.parseInt( parts[4] ) : DEFAULT_SPEED )
+						.speed( parts.length >= 5 ? Integer.parseInt( parts[4] ) : DEFAULT_STAND_SPEED )
 						.points( points )
 						.build()
 				);

@@ -80,11 +80,9 @@ class RouteDataTest {
 		@Property( "route" ) RouteData route,
 		@Property( "expectedGroundLayoutRouteStrings" ) List<String> expectedGroundLayoutRouteStrings ) {
 		
-		List<String> actual = route.buildGroundLayoutStrings( latLngConverter );
-		actual.forEach( element -> System.out.println(element) );
 		Assertions.assertIterableEquals(
 			expectedGroundLayoutRouteStrings,
-			actual
+			route.buildGroundLayoutStrings( latLngConverter )
 		);
 	}
 	

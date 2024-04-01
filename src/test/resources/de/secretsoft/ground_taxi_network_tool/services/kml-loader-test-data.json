@@ -551,7 +551,7 @@
 			"name": "44A",
 			"gate": false,
 			"taxiout": false,
-			"speed": 20,
+			"speed": 10,
 			"points": [
 				{
 					"name": "44A",
@@ -586,7 +586,7 @@
 			"name": "44A",
 			"gate": false,
 			"taxiout": true,
-			"speed": 20,
+			"speed": 10,
 			"points": [
 				{
 					"name": "44A",
@@ -693,7 +693,7 @@
 			"name": "06",
 			"gate": true,
 			"taxiout": false,
-			"speed": 20,
+			"speed": 10,
 			"points": [
 				{
 					"name": "06",
@@ -742,7 +742,7 @@
 			"name": "06",
 			"gate": true,
 			"taxiout": true,
-			"speed": 20,
+			"speed": 10,
 			"points": [
 				{
 					"name": "06",
@@ -887,7 +887,7 @@
 			"name": "Z7",
 			"stand": "44A",
 			"gate": false,
-			"speed": 20,
+			"speed": 10,
 			"points": [
 				{
 					"name": "44A",
