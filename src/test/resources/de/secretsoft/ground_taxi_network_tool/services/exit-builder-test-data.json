@@ -4850,5 +4850,964 @@
 			}
 		],
 		"errors": [ ]
+	},
+	{
+		"displayName": "Speed of LineUp is used for exit and speed of exit is used for holding point: One Exit and One LineUp",
+		"inputRoutes": [
+			{
+				"type": "line_up",
+				"raw": "LU; 33; 15; B1; HP_B1-END",
+				"name": "B1",
+				"runwayLineUp": "33",
+				"runwayExit": "15",
+				"found": false,
+				"speed": 55,
+				"points": [
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": false
+					}
+				]
+			},
+			{
+				"type": "exit",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"33"
+				],
+				"exitRunways": [
+					{
+						"runway": "15",
+						"diretion": "LEFT"
+					}
+				],
+				"foundLineUp": false,
+				"speed": 30,
+				"points": [
+					{
+						"name": "HP_B1",
+						"latitude": 53.625597181847,
+						"longitude": 10.00170347976259,
+						"start": true
+					},
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": false
+					}
+				]
+			}
+		],
+		"expectedRoutes": [
+			{
+				"type": "line_up",
+				"raw": "LU; 33; 15; B1; HP_B1-END",
+				"name": "B1",
+				"runwayLineUp": "33",
+				"runwayExit": "15",
+				"found": true,
+				"speed": 55,
+				"points": [
+					{
+						"name": "HP_B1",
+						"latitude": 53.62559713589739,
+						"longitude": 10.00170507345707,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": false
+					}
+				]
+			},
+			{
+				"type": "exit",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [ ],
+				"exitRunways": [
+					{
+						"runway": "15",
+						"diretion": "LEFT"
+					}
+				],
+				"foundLineUp": true,
+				"speed": 55,
+				"points": [
+					{
+						"name": "HP_B1",
+						"latitude": 53.625597181847,
+						"longitude": 10.00170347976259,
+						"start": false
+					},
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62546081019625,
+						"longitude": 10.00126605369644,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62543414344327,
+						"longitude": 10.00116247279543,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541580221034,
+						"longitude": 10.00105066561503,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540629756148,
+						"longitude": 10.00093072889968,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62540545096495,
+						"longitude": 10.00080394569528,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62541735022211,
+						"longitude": 10.00066232107385,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62544796089875,
+						"longitude": 10.00051188154226,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6254905070213,
+						"longitude": 10.00037586607451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62553736363733,
+						"longitude": 10.00026982641274,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62558480779817,
+						"longitude": 10.00018626327451,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6256383698856,
+						"longitude": 10.00012001008401,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62569958343035,
+						"longitude": 10.00005943750768,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62591119966135,
+						"longitude": 9.999873821341103,
+						"start": true
+					}
+				]
+			},
+			{
+				"type": "holding_point",
+				"raw": "Exit; 33; 15-LEFT; B1; HP_B1-EXP_B1",
+				"name": "B1",
+				"lineUpRunways": [
+					"33"
+				],
+				"speed": 30,
+				"points": [
+					{
+						"name": "HP_B1",
+						"latitude": 53.625597181847,
+						"longitude": 10.00170347976259,
+						"start": false
+					},
+					{
+						"name": "EXP_B1",
+						"latitude": 53.62577206329938,
+						"longitude": 10.00228962590615,
+						"start": true
+					}
+				]
+			}
+		],
+		"errors": [ ]
+	},
+	{
+		"displayName": "Speed of LineUp is used for exit and speed of exit is used for holding point: One Exit and Two LineUp",
+		"inputRoutes": [
+			{
+				"type": "line_up",
+				"raw": "LU; 05; 23; D6; HP_D6-END",
+				"name": "D6",
+				"runwayLineUp": "23",
+				"runwayExit": "05",
+				"speed": 55,
+				"points": [
+					{
+						"name": "HP_D6",
+						"latitude": 53.62717911776146,
+						"longitude": 9.983941272613786,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62730557144035,
+						"longitude": 9.98375774659986,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62745876915559,
+						"longitude": 9.983543438074673,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62751173016008,
+						"longitude": 9.983454556732546,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62756336982681,
+						"longitude": 9.983334611084015,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62760280684729,
+						"longitude": 9.983186182696233,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62762491282005,
+						"longitude": 9.983014168350566,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62762167600408,
+						"longitude": 9.982878266221656,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62760450556443,
+						"longitude": 9.98273152151331,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62755574875705,
+						"longitude": 9.982559305044845,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62718268156816,
+						"longitude": 9.981796692295434,
+						"start": false
+					}
+				]
+			},
+			{
+				"type": "line_up",
+				"raw": "LU; 05; 23; D6; HP_D6-END",
+				"name": "D6",
+				"runwayLineUp": "05",
+				"runwayExit": "23",
+				"speed": 35,
+				"points": [
+					{
+						"name": "HP_D6",
+						"latitude": 53.62717878450629,
+						"longitude": 9.983940909524707,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62729833298867,
+						"longitude": 9.983771475663886,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62738626154963,
+						"longitude": 9.983683184547667,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62745740332743,
+						"longitude": 9.983628312182894,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62753552959023,
+						"longitude": 9.983587100032782,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62760743756083,
+						"longitude": 9.983563003974613,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6277086219035,
+						"longitude": 9.983544326876206,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62780706744162,
+						"longitude": 9.983556799890447,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62791020069724,
+						"longitude": 9.983592678123292,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62802122978529,
+						"longitude": 9.983660484565913,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62811638302541,
+						"longitude": 9.983748954417358,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62819783032343,
+						"longitude": 9.983851735158616,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62825428354548,
+						"longitude": 9.98395547020429,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62857176519427,
+						"longitude": 9.984609321274835,
+						"start": false
+					}
+				]
+			},
+			{
+				"type": "exit",
+				"raw": "Exit; 05, 23; 05-RIGHT, 23-LEFT; D6; HP_D6-EXP_D6",
+				"name": "D6",
+				"lineUpRunways": [
+					"05",
+					"23"
+				],
+				"exitRunways": [
+					{
+						"runway": "05",
+						"diretion": "RIGHT"
+					},
+					{
+						"runway": "23",
+						"diretion": "LEFT"
+					}
+				],
+				"speed": 30,
+				"points": [
+					{
+						"name": "HP_D6",
+						"latitude": 53.62717874952681,
+						"longitude": 9.983937408079973,
+						"start": true
+					},
+					{
+						"name": "EXP_D6",
+						"latitude": 53.62682331025284,
+						"longitude": 9.984432480950511,
+						"start": false
+					}
+				]
+			}
+		],
+		"expectedRoutes": [
+			{
+				"type": "line_up",
+				"raw": "LU; 05; 23; D6; HP_D6-END",
+				"name": "D6",
+				"runwayLineUp": "23",
+				"runwayExit": "05",
+				"found": true,
+				"speed": 55,
+				"points": [
+					{
+						"name": "HP_D6",
+						"latitude": 53.62717911776146,
+						"longitude": 9.983941272613786,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62730557144035,
+						"longitude": 9.98375774659986,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62745876915559,
+						"longitude": 9.983543438074673,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62751173016008,
+						"longitude": 9.983454556732546,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62756336982681,
+						"longitude": 9.983334611084015,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62760280684729,
+						"longitude": 9.983186182696233,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62762491282005,
+						"longitude": 9.983014168350566,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62762167600408,
+						"longitude": 9.982878266221656,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62760450556443,
+						"longitude": 9.98273152151331,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62755574875705,
+						"longitude": 9.982559305044845,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62718268156816,
+						"longitude": 9.981796692295434,
+						"start": false
+					}
+				]
+			},
+			{
+				"type": "line_up",
+				"raw": "LU; 05; 23; D6; HP_D6-END",
+				"name": "D6",
+				"runwayLineUp": "05",
+				"runwayExit": "23",
+				"found": true,
+				"speed": 35,
+				"points": [
+					{
+						"name": "HP_D6",
+						"latitude": 53.62717878450629,
+						"longitude": 9.983940909524707,
+						"start": true
+					},
+					{
+						"name": "_",
+						"latitude": 53.62729833298867,
+						"longitude": 9.983771475663886,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62738626154963,
+						"longitude": 9.983683184547667,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62745740332743,
+						"longitude": 9.983628312182894,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62753552959023,
+						"longitude": 9.983587100032782,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62760743756083,
+						"longitude": 9.983563003974613,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6277086219035,
+						"longitude": 9.983544326876206,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62780706744162,
+						"longitude": 9.983556799890447,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62791020069724,
+						"longitude": 9.983592678123292,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62802122978529,
+						"longitude": 9.983660484565913,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62811638302541,
+						"longitude": 9.983748954417358,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62819783032343,
+						"longitude": 9.983851735158616,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62825428354548,
+						"longitude": 9.98395547020429,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62857176519427,
+						"longitude": 9.984609321274835,
+						"start": false
+					}
+				]
+			},
+			{
+				"type": "exit",
+				"raw": "Exit; 05, 23; 05-RIGHT, 23-LEFT; D6; HP_D6-EXP_D6",
+				"name": "D6",
+				"lineUpRunways": [ ],
+				"exitRunways": [
+					{
+						"runway": "05",
+						"diretion": "RIGHT"
+					}
+				],
+				"foundLineUp": true,
+				"speed": 55,
+				"points": [
+					{
+						"name": "HP_D6",
+						"latitude": 53.62717874952681,
+						"longitude": 9.983937408079973,
+						"start": false
+					},
+					{
+						"name": "EXP_D6",
+						"latitude": 53.62682331025284,
+						"longitude": 9.984432480950511,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62730557144035,
+						"longitude": 9.98375774659986,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62745876915559,
+						"longitude": 9.983543438074673,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62751173016008,
+						"longitude": 9.983454556732546,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62756336982681,
+						"longitude": 9.983334611084015,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62760280684729,
+						"longitude": 9.983186182696233,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62762491282005,
+						"longitude": 9.983014168350566,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62762167600408,
+						"longitude": 9.982878266221656,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62760450556443,
+						"longitude": 9.98273152151331,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62755574875705,
+						"longitude": 9.982559305044845,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62718268156816,
+						"longitude": 9.981796692295434,
+						"start": true
+					}
+				]
+			},
+			{
+				"type": "exit",
+				"raw": "Exit; 05, 23; 05-RIGHT, 23-LEFT; D6; HP_D6-EXP_D6",
+				"name": "D6",
+				"lineUpRunways": [ ],
+				"exitRunways": [
+					{
+						"runway": "23",
+						"diretion": "LEFT"
+					}
+				],
+				"foundLineUp": true,
+				"speed": 35,
+				"points": [
+					{
+						"name": "HP_D6",
+						"latitude": 53.62717874952681,
+						"longitude": 9.983937408079973,
+						"start": false
+					},
+					{
+						"name": "EXP_D6",
+						"latitude": 53.62682331025284,
+						"longitude": 9.984432480950511,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62729833298867,
+						"longitude": 9.983771475663886,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62738626154963,
+						"longitude": 9.983683184547667,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62745740332743,
+						"longitude": 9.983628312182894,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62753552959023,
+						"longitude": 9.983587100032782,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62760743756083,
+						"longitude": 9.983563003974613,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.6277086219035,
+						"longitude": 9.983544326876206,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62780706744162,
+						"longitude": 9.983556799890447,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62791020069724,
+						"longitude": 9.983592678123292,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62802122978529,
+						"longitude": 9.983660484565913,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62811638302541,
+						"longitude": 9.983748954417358,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62819783032343,
+						"longitude": 9.983851735158616,
+						"start": false
+					},
+					{
+						"name": "_",
+						"latitude": 53.62825428354548,
+						"longitude": 9.98395547020429,
+						"start": false
+					},
+					{
+						"name": "END",
+						"latitude": 53.62857176519427,
+						"longitude": 9.984609321274835,
+						"start": true
+					}
+				]
+			},
+			{
+				"type": "holding_point",
+				"raw": "Exit; 05, 23; 05-RIGHT, 23-LEFT; D6; HP_D6-EXP_D6",
+				"name": "D6",
+				"lineUpRunways": [
+					"05",
+					"23"
+				],
+				"speed": 30,
+				"points": [
+					{
+						"name": "HP_D6",
+						"latitude": 53.62717874952681,
+						"longitude": 9.983937408079973,
+						"start": false
+					},
+					{
+						"name": "EXP_D6",
+						"latitude": 53.62682331025284,
+						"longitude": 9.984432480950511,
+						"start": true
+					}
+				]
+			}
+		],
+		"errors": [ ]
 	}
 ]

@@ -96,6 +96,8 @@ public class ExitBuilder {
 						.filter( exitRunway -> Objects.equals( exitRunway.getRunway(), lineUp.getRunwayExit() ) )
 						.toList()
 				)
+				.speed( lineUp.getSpeed() )
+				.foundLineUp( true )
 				.points(
 					exit.getPoints().stream()
 						.map( pointData -> pointData.toBuilder()
@@ -103,7 +105,6 @@ public class ExitBuilder {
 							.build() )
 						.collect( Collectors.toList() )
 				)
-				.foundLineUp( true )
 				.build();
 			List<String> lineUpCrossingNames = lineUp.getPoints().stream()
 				.filter( PointData::hasCrossingName )
