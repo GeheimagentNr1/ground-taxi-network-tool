@@ -5,12 +5,12 @@ import de.secretsoft.ground_taxi_network_tool.models.RouteData;
 import de.secretsoft.ground_taxi_network_tool.services.KmlLoader;
 import de.secretsoft.ground_taxi_network_tool.services.RoutesHolder;
 import net.opengis.kml._2.Placemark;
-import org.springframework.batch.core.Step;
+import org.springframework.batch.core.step.Step;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
-import org.springframework.batch.item.xml.StaxEventItemReader;
-import org.springframework.batch.item.xml.builder.StaxEventItemReaderBuilder;
+import org.springframework.batch.infrastructure.item.xml.StaxEventItemReader;
+import org.springframework.batch.infrastructure.item.xml.builder.StaxEventItemReaderBuilder;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,14 +31,13 @@ public class ReadKmlStepConfiguration {
 	@Bean
 	public Step readKmlStep(
 		final JobRepository jobRepository,
-		final PlatformTransactionManager transactionManager,
 		final StaxEventItemReader<Placemark> kmlReader,
 		final ReadKmlProcessor readKmlProcessor,
 		final ReadKmlWriter readKmlWriter
 	) {
 		
 		return new StepBuilder( STEP_NAME, jobRepository )
-			.<Placemark, RouteData> chunk( 1000, transactionManager )
+			.<Placemark, RouteData> chunk( 1000 )
 			.reader( kmlReader )
 			.processor( readKmlProcessor )
 			.writer( readKmlWriter )

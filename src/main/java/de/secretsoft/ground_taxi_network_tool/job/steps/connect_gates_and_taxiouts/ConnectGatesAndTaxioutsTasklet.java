@@ -3,10 +3,10 @@ package de.secretsoft.ground_taxi_network_tool.job.steps.connect_gates_and_taxio
 import de.secretsoft.ground_taxi_network_tool.services.GateTaxioutConnector;
 import de.secretsoft.ground_taxi_network_tool.services.RoutesHolder;
 import lombok.RequiredArgsConstructor;
-import org.springframework.batch.core.StepContribution;
+import org.springframework.batch.core.step.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
-import org.springframework.batch.repeat.RepeatStatus;
+import org.springframework.batch.infrastructure.repeat.RepeatStatus;
 
 
 @RequiredArgsConstructor

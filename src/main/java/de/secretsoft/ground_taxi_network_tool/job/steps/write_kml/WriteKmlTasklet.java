@@ -5,12 +5,12 @@ import de.secretsoft.ground_taxi_network_tool.services.KmlWriter;
 import de.secretsoft.ground_taxi_network_tool.services.RoutesHolder;
 import lombok.RequiredArgsConstructor;
 import net.opengis.kml._2.Document;
-import org.springframework.batch.core.StepContribution;
+import org.springframework.batch.core.step.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
-import org.springframework.batch.item.Chunk;
-import org.springframework.batch.item.xml.StaxEventItemWriter;
-import org.springframework.batch.repeat.RepeatStatus;
+import org.springframework.batch.infrastructure.item.Chunk;
+import org.springframework.batch.infrastructure.item.xml.StaxEventItemWriter;
+import org.springframework.batch.infrastructure.repeat.RepeatStatus;
 
 import java.io.IOException;
 

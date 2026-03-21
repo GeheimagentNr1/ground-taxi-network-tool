@@ -6,7 +6,7 @@ import de.secretsoft.ground_taxi_network_tool.services.RoutesHolder;
 import lombok.RequiredArgsConstructor;
 import net.opengis.kml._2.Placemark;
 import org.apache.commons.lang3.tuple.Pair;
-import org.springframework.batch.item.ItemProcessor;
+import org.springframework.batch.infrastructure.item.ItemProcessor;
 
 import java.util.List;
 

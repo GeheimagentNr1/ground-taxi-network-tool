@@ -3,8 +3,8 @@ package de.secretsoft.ground_taxi_network_tool.job.steps.write_ground_layout;
 import de.secretsoft.ground_taxi_network_tool.models.RouteData;
 import de.secretsoft.ground_taxi_network_tool.services.LatLngConverter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.batch.item.Chunk;
-import org.springframework.batch.item.support.AbstractFileItemWriter;
+import org.springframework.batch.infrastructure.item.Chunk;
+import org.springframework.batch.infrastructure.item.support.AbstractFileItemWriter;
 
 
 @RequiredArgsConstructor

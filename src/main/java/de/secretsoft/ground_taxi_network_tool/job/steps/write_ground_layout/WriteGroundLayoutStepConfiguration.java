@@ -3,7 +3,7 @@ package de.secretsoft.ground_taxi_network_tool.job.steps.write_ground_layout;
 import de.secretsoft.ground_taxi_network_tool.config.GroundTaxiNetworkToolConfig;
 import de.secretsoft.ground_taxi_network_tool.services.LatLngConverter;
 import de.secretsoft.ground_taxi_network_tool.services.RoutesHolder;
-import org.springframework.batch.core.Step;
+import org.springframework.batch.core.step.Step;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
@@ -26,12 +26,11 @@ public class WriteGroundLayoutStepConfiguration {
 	@Bean
 	public Step writeGroundLayoutStep(
 		JobRepository jobRepository,
-		PlatformTransactionManager transactionManager,
 		WriteGroundLayoutTasklet writeGroundLayoutTasklet
 	) {
 		
 		return new StepBuilder( STEP_NAME, jobRepository )
-			.tasklet( writeGroundLayoutTasklet, transactionManager )
+			.tasklet( writeGroundLayoutTasklet )
 			.build();
 	}
 	

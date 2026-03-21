@@ -4,12 +4,12 @@ import de.secretsoft.ground_taxi_network_tool.config.GroundTaxiNetworkToolConfig
 import de.secretsoft.ground_taxi_network_tool.services.KmlWriter;
 import de.secretsoft.ground_taxi_network_tool.services.RoutesHolder;
 import net.opengis.kml._2.Document;
-import org.springframework.batch.core.Step;
+import org.springframework.batch.core.step.Step;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
-import org.springframework.batch.item.xml.StaxEventItemWriter;
-import org.springframework.batch.item.xml.builder.StaxEventItemWriterBuilder;
+import org.springframework.batch.infrastructure.item.xml.StaxEventItemWriter;
+import org.springframework.batch.infrastructure.item.xml.builder.StaxEventItemWriterBuilder;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,12 +30,11 @@ public class WriteKmlStepConfiguration {
 	@Bean
 	public Step writeKmlStep(
 		JobRepository jobRepository,
-		PlatformTransactionManager transactionManager,
 		WriteKmlTasklet writeKmlTasklet
 	) {
 		
 		return new StepBuilder( STEP_NAME, jobRepository )
-			.tasklet( writeKmlTasklet, transactionManager )
+			.tasklet( writeKmlTasklet )
 			.build();
 	}
 	

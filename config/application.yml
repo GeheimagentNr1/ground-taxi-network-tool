@@ -1,3 +1,12 @@
+spring:
+  batch:
+    job:
+      enabled: false
+
+logging:
+  file:
+    path: ./logs
+
 app:
   inputKmlFile: ./data/EDDH.kml
   processedKmlFile: ./data/EDDH_processed.kml
