@@ -16,6 +16,6 @@
     </jaxb:globalBindings>
 
     <!-- Special kml.xsd settings. -->
-    <jaxb:bindings schemaLocation="../xsd/kml.xsd" node="//xs:schema">
+    <jaxb:bindings schemaLocation="../xsd/kml_custom.xsd" node="//xs:schema">
     </jaxb:bindings>
 </jaxb:bindings>

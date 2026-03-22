@@ -1,0 +1,106 @@
+name: KML Schema Compatibility Check
+
+on:
+  push:
+  schedule:
+    - cron: '0 8 * * 1' # Every Monday at 08:00 UTC
+  workflow_dispatch:
+
+jobs:
+  validate-kml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Discover latest KML schema version
+        id: schema
+        run: |
+          echo "Fetching KML schema index from schemas.opengis.net..."
+          latest=$(curl -fsSL https://schemas.opengis.net/kml/ \
+            | grep -oP 'href="\K[0-9]+\.[0-9]+(\.[0-9]+)?(?=/)' \
+            | sort -V \
+            | tail -1)
+
+          if [ -z "$latest" ]; then
+            echo "Failed to discover KML schema versions, falling back to 2.2.0"
+            latest="2.2.0"
+          fi
+
+          echo "Latest KML schema version: $latest"
+          echo "version=$latest" >> "$GITHUB_OUTPUT"
+
+          # Derive main XSD filename: 2.2.0 -> ogckml22.xsd, 2.3 -> ogckml23.xsd
+          major=$(echo "$latest" | cut -d. -f1)
+          minor=$(echo "$latest" | cut -d. -f2)
+          echo "xsd_file=ogckml${major}${minor}.xsd" >> "$GITHUB_OUTPUT"
+
+      - name: Download official KML schema
+        run: |
+          version="${{ steps.schema.outputs.version }}"
+          xsd_file="${{ steps.schema.outputs.xsd_file }}"
+          base_url="https://schemas.opengis.net/kml/${version}"
+
+          mkdir -p /tmp/kml-schema
+          echo "Downloading ${base_url}/${xsd_file}"
+          curl -fsSL -o "/tmp/kml-schema/${xsd_file}" "${base_url}/${xsd_file}"
+
+          # Download companion schemas if they exist (not all versions have all files)
+          for companion in atom-author-link.xsd xAL.xsd; do
+            if curl -fsSL -o "/tmp/kml-schema/${companion}" "${base_url}/${companion}" 2>/dev/null; then
+              echo "Downloaded ${companion}"
+            else
+              echo "Optional schema ${companion} not available for version ${version}, skipping"
+            fi
+          done
+
+      - name: Validate KML files against official schema
+        run: |
+          xsd_file="${{ steps.schema.outputs.xsd_file }}"
+          version="${{ steps.schema.outputs.version }}"
+          echo "Validating against KML ${version} (${xsd_file})"
+
+          failed=0
+          for kml in $(find data -name '*.kml' -not -path '*/Old/*'); do
+            echo "Validating: $kml"
+            if xmllint --noout --schema "/tmp/kml-schema/${xsd_file}" "$kml" 2>&1; then
+              echo "  PASS"
+            else
+              echo "  FAIL"
+              failed=1
+            fi
+          done
+
+          if [ "$failed" -eq 1 ]; then
+            echo ""
+            echo "One or more KML files failed validation against the official KML ${version} schema."
+            echo "This may indicate the custom XSD subset (src/main/xsd/kml_custom.xsd) has drifted from the standard."
+            exit 1
+          fi
+
+      - name: Verify custom XSD elements match official schema
+        run: |
+          xsd_file="${{ steps.schema.outputs.xsd_file }}"
+          version="${{ steps.schema.outputs.version }}"
+          echo "Checking custom XSD element names exist in official KML ${version} schema..."
+
+          official="/tmp/kml-schema/${xsd_file}"
+          custom=src/main/xsd/kml_custom.xsd
+
+          failed=0
+          for element in $(grep -oP 'name="\K[^"]+' "$custom"); do
+            if grep -q "name=\"$element\"" "$official"; then
+              echo "  $element: found in official schema"
+            else
+              echo "  $element: NOT FOUND in official schema"
+              failed=1
+            fi
+          done
+
+          if [ "$failed" -eq 1 ]; then
+            echo ""
+            echo "Custom XSD contains elements not present in the official KML ${version} schema."
+            exit 1
+          fi
