@@ -1,13 +1,3 @@
-spring:
-  batch:
-    job:
-      enabled: false
-
 logging:
   file:
     path: ./logs
-
-app:
-  inputKmlFile: ./data/EDDH.kml
-  processedKmlFile: ./data/EDDH_processed.kml
-  groundLayoutFile: ./data/EDDH_ground_layout.txt
